@@ -5,6 +5,11 @@ using Infrastructure.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using TicketManagementUI.Components;
+using MudBlazor.Services;
+
+
+
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -35,7 +40,7 @@ builder.Services.AddDbContext<AppDBContext>(opt =>
 
 
 builder.Services.AddScoped<IAccountService, AccountService>();
-
+builder.Services.AddMudServices();
 
 var app = builder.Build();
 
